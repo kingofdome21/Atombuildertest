@@ -309,6 +309,171 @@ h2 {
     }
 }
 
+/* Atom Builder Styles */
+.atom-builder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.atom-builder-model {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.nucleus-container {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(231, 76, 60, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.electron-orbit {
+    position: absolute;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-1 {
+    width: 240px;
+    height: 240px;
+}
+
+.orbit-2 {
+    width: 320px;
+    height: 320px;
+}
+
+.builder-proton, .builder-neutron, .builder-electron {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.builder-proton {
+    background-color: #6b1a12;
+    background-image: linear-gradient(45deg, #6b1a12, #8a2a22);
+}
+
+.builder-neutron {
+    background-color: #5a5a5a;
+    background-image: linear-gradient(45deg, #5a5a5a, #6e6e6e);
+}
+
+.builder-electron {
+    position: absolute;
+    background-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+    z-index: 1;
+}
+
+.atom-builder-controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-proton-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.add-neutron-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.add-electron-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+}
+
+.atom-builder-stats {
+    background-color: #f0f8f4;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.atom-builder-stats p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.element-identification {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e0f0e8;
+    text-align: center;
+    min-height: 60px;
+    min-width: 300px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .atom-builder-model {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .nucleus-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .orbit-1 {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .orbit-2 {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .builder-proton, .builder-neutron, .builder-electron {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .atom-builder-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 /* Quark Model Styles (Home Page) */
 .quark-model {
     display: flex;
